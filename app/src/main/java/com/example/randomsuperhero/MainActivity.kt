@@ -189,6 +189,7 @@ fun RandomSuperhero(navController: NavController, SuperHeroViewModel: SuperHeroV
                             ThemedText(stringResource(R.string.instructions),24)
                         } else {
                             ThemedText(stringResource(R.string.randomheroTitle,SuperHeroViewModel.name),16)
+                            ThemedText(stringResource(R.string.publisher,SuperHeroViewModel.publisher),16)
                             ThemedText(stringResource(R.string.firstAppearance,SuperHeroViewModel.firstAppearance),16)
                             ThemedText(stringResource(R.string.alignment, SuperHeroViewModel.alignment),16)
                             AsyncImage(
