@@ -275,7 +275,9 @@ fun SettingsScreen(navController: NavController, modifier: Modifier = Modifier) 
             Column(modifier = modifier
                 .padding(innerPadding)
                 .background(backRoundColouri)
-                .fillMaxSize()
+                .fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 ThemedText(stringResource(R.string.teemaInfo),30)
                 RadioButtonGroup(
