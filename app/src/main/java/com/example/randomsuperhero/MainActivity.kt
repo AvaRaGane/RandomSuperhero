@@ -195,15 +195,15 @@ fun RandomSuperhero(navController: NavController, SuperHeroViewModel: SuperHeroV
                             AsyncImage(
                                 model = ImageRequest.Builder(LocalContext.current)
                                     .data(SuperHeroViewModel.imgUrl)
-                                    .placeholder(R.drawable.no_image)
+                                    .placeholder(R.drawable.loading)
                                     .error(R.drawable.no_image)
                                     .build(),
                                 contentDescription = "Superhero Image",
                                 modifier = Modifier
-                                    .size(200.dp)
+                                    .size(209.dp,280.dp)
                                     .padding(top = 8.dp)
                                     .border(width = 4.dp, color = fontColouri),
-                                contentScale = ContentScale.Crop,
+                                contentScale = ContentScale.Fit
                             )
                         }
                     }
