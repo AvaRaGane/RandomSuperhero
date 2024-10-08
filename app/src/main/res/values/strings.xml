@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">RandomSuperhero</string>
+    <string name="title">Random Superhero App</string>
+    <string name="info">Info</string>
+    <string name="settings">Settings</string>
+    <string name="instructions">Press button to start!</string>
+    <string name="randomheroTitle">Hero name is: %s</string>
+    <string name="firstAppearance">First time seen on: %s</string>
+    <string name="publisher">Publisher: %s</string>
+    <string name="alignment">Alignment: %s</string>
+    <string name="button">Next SuperHero</string>
+    <string name="info1">This application was created as a final project for the Mobile Programming with Native Technologies course in the fall of 2024.</string>
+    <string name="info2">The application uses the SuperHero API, and its documentation can be found at <a href="https://superheroapi.com/">https://superheroapi.com/</a>.</string>
+    <string name="info3">By pressing a button, the app randomly selects a superhero and displays general information about them. In the settings, you can change color for font and background.</string>
+    <string name="info4">The application was created by Juha-Matti Huhta <a href="https://github.com/AvaRaGane">https://github.com/AvaRaGane</a></string>
+    <string name="teemaInfo">Choose your preferred color theme</string>
+    <string name="teema1">Dark blue background and golden text</string>
+    <string name="teema2">Black background and neon green text</string>
+    <string name="teema3">Black background and neon orange text</string>
+    <string name="teema4">Red background and white text</string>
+</resources>
