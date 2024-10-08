@@ -42,7 +42,7 @@ class SuperHeroViewModel: ViewModel() {
     var alignment by mutableStateOf("")
     var imgUrl by mutableStateOf("")
     var error by mutableStateOf("")
-    private val API_KEY: String = "a1caf37c4565e7024f07bf456baf190f"
+    private val API_KEY: String = ""
     private val superHeroApi = SuperHeroApi.create(API_KEY)
 
     //Handle button press
