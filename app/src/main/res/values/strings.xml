@@ -18,4 +18,5 @@
     <string name="teema2">Black background and neon green text</string>
     <string name="teema3">Black background and neon orange text</string>
     <string name="teema4">Red background and white text</string>
+    <string name="apiKey">No API-key found!</string>
 </resources>

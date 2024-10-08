@@ -176,44 +176,48 @@ fun RandomSuperhero(navController: NavController, SuperHeroViewModel: SuperHeroV
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 ThemedText(stringResource(R.string.title),30)
-                if (SuperHeroViewModel.loading) {
-                    CircularProgressIndicator(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .size(50.dp),
-                        color = fontColouri
-                    )
-                } else {
-                    if (SuperHeroViewModel.name.isEmpty()) {
-                        ThemedText(stringResource(R.string.instructions),24)
-                    } else {
-                        ThemedText(stringResource(R.string.randomheroTitle,SuperHeroViewModel.name),16)
-                        ThemedText(stringResource(R.string.firstAppearance,SuperHeroViewModel.firstAppearance),16)
-                        ThemedText(stringResource(R.string.alignment, SuperHeroViewModel.alignment),16)
-                        AsyncImage(
-                            model = ImageRequest.Builder(LocalContext.current)
-                                .data(SuperHeroViewModel.imgUrl)
-                                .placeholder(R.drawable.no_image)
-                                .error(R.drawable.no_image)
-                                .build(),
-                            contentDescription = "Superhero Image",
+                if (SuperHeroViewModel.error===""){
+                    if (SuperHeroViewModel.loading) {
+                        CircularProgressIndicator(
                             modifier = Modifier
-                                .size(200.dp)
-                                .padding(top = 8.dp)
-                                .border(width = 4.dp, color = fontColouri),
-                            contentScale = ContentScale.Crop,
+                                .padding(16.dp)
+                                .size(50.dp),
+                            color = fontColouri
                         )
+                    } else {
+                        if (SuperHeroViewModel.name.isEmpty()) {
+                            ThemedText(stringResource(R.string.instructions),24)
+                        } else {
+                            ThemedText(stringResource(R.string.randomheroTitle,SuperHeroViewModel.name),16)
+                            ThemedText(stringResource(R.string.firstAppearance,SuperHeroViewModel.firstAppearance),16)
+                            ThemedText(stringResource(R.string.alignment, SuperHeroViewModel.alignment),16)
+                            AsyncImage(
+                                model = ImageRequest.Builder(LocalContext.current)
+                                    .data(SuperHeroViewModel.imgUrl)
+                                    .placeholder(R.drawable.no_image)
+                                    .error(R.drawable.no_image)
+                                    .build(),
+                                contentDescription = "Superhero Image",
+                                modifier = Modifier
+                                    .size(200.dp)
+                                    .padding(top = 8.dp)
+                                    .border(width = 4.dp, color = fontColouri),
+                                contentScale = ContentScale.Crop,
+                            )
+                        }
                     }
-                }
-                Button(
-                    modifier = Modifier.padding(top = 8.dp),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = fontColouri,
-                        contentColor = backRoundColouri
-                    ),
-                    onClick = { SuperHeroViewModel.handleButtonPress() }
-                ) {
-                    Text(text = stringResource(R.string.button))
+                    Button(
+                        modifier = Modifier.padding(top = 8.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = fontColouri,
+                            contentColor = backRoundColouri
+                        ),
+                        onClick = { SuperHeroViewModel.handleButtonPress() }
+                    ) {
+                        Text(text = stringResource(R.string.button))
+                    }
+                }else{
+                    ThemedText(SuperHeroViewModel.error,30)
                 }
             }
         }

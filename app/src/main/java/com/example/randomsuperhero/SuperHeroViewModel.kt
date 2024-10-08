@@ -47,8 +47,12 @@ class SuperHeroViewModel: ViewModel() {
 
     //Handle button press
     fun handleButtonPress() {
-        loading=true
-        randomize()
+        if (API_KEY===""){
+            error="No API KEY FOUND!!!"
+        }
+        else{
+            loading=true
+            randomize()}
     }
 
     // Randomize SuperHero ID between 1 and 731
